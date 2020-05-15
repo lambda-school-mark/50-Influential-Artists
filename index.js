@@ -263,18 +263,28 @@ console.log(getArtistByIndex(artists, "Vincent Van Gogh"));
  * For example, if removeArtist is invoked with the data and the number 0,
  * it will remove Amedeo Modigliani from our dataset.
 */
-function removeArtist(/*code here*/) {
-  /* code here */
+function removeArtist(name, id) {
+  for (let i = 0; i < artists.length; i++) {
+    if (artists[i].name === name && artists[i].id === id) artists.splice(i, 1);
+  }
 }
+
+removeArtist("Amedeo Modigliani", 0);
 
 /**
 
 
 /* Task 5: Create a function called lotsOfArt() that takes artists as an argument and returns an array with names of artists who painted more than 100 paintings */
 
-function lotsOfArt(/* Code here */) {
-  /* Code here */
+function lotsOfArt(artists) {
+  newArray = [];
+  for (let i = 0; i < artists.length; i++)
+    if (artists[i].paintings > 100) {
+      newArray.push(artists[i].name);
+    }
+  return newArray;
 }
+console.log(lotsOfArt(artists));
 
 /* Task 6: Create a function called `addArtist` that can accept an array of information and add it to the artists array. Then, Add a 21st artist to the array (you) with custom information! 👩‍🎨👨‍🎨
 
@@ -285,9 +295,18 @@ genre: Web Design,
 nationality: Your Nationality Here
 bio: Add 1-2 sentences (or use lorem ipsum) "*/
 
-function addArtist(/* Code here */) {
-  /* Code here */
+function addArtist(id, name, years, genre, nationality, bio) {
+  artists.push({ id, name, years, genre, nationality, bio });
 }
+addArtist(
+  21,
+  "Mark",
+  "1999-2020",
+  "Web Design",
+  "American",
+  "that one kid learning JavaScript"
+);
+console.log(artists);
 
 // 🎨🎨 STRETCH 🎨🎨//
 
