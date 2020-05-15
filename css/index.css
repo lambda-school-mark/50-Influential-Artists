@@ -1,4 +1,171 @@
-/* Font in design files is Raleway */
-
-/* background-image in Design 👇
- url('https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg/1920px-John_Martin_-_The_Plains_of_Heaven_-_Google_Art_Project.jpg'); */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+* {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2rem 0;
+}
+.nav-bar a {
+  padding: 0 1rem;
+  color: #616161;
+  font-size: 1.6rem;
+  text-decoration: none;
+}
+.nav-bar a:not(:last-child) {
+  border-right: 2px solid grey;
+}
+.nav-bar a:first-child {
+  font-weight: bold;
+}
+.title-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 2rem auto;
+  background-color: blue;
+  background-image: url(/assets/home.png);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 10rem 2rem;
+}
+.title-container h1 {
+  font-size: 2.6rem;
+  color: white;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+.title-container button {
+  font-size: 1.2rem;
+  border-radius: 5px;
+  color: #616161;
+}
+.artists-container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+  border-top: 2px solid lightgrey;
+  padding: 2rem 0;
+}
+.artists-container .artist {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+.artists-container .artist img {
+  width: 80%;
+  border-radius: 8px;
+}
+.artists-container .artist a {
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #616161;
+}
+@media (max-width: 500px) {
+  .artists-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .artists-container .artist {
+    width: 100%;
+    padding: 0 1rem 1rem;
+  }
+}

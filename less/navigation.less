@@ -1,0 +1,17 @@
+.nav-bar {
+  .displayFlex(center, row);
+
+  padding: 2rem 0;
+  a {
+    padding: 0 1rem;
+    color: @maincolor;
+    font-size: 1.6rem;
+    text-decoration: none;
+    &:not(:last-child) {
+      border-right: 2px solid grey;
+    }
+    &:first-child {
+      font-weight: bold;
+    }
+  }
+}

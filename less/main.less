@@ -1,0 +1,59 @@
+.title-container {
+  .centerContent();
+  margin: 2rem auto;
+  background-color: blue;
+  background-image: url(/assets/home.png);
+  background-size: cover;
+  .displayFlex(center, column);
+  align-items: center;
+  text-align: center;
+  padding: 10rem 2rem;
+
+  h1 {
+    font-size: 2.6rem;
+    color: @imagewords;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+  button {
+    font-size: 1.2rem;
+    border-radius: 5px;
+    color: @maincolor;
+  }
+}
+
+.artists-container {
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  justify-content: space-between;
+  border-top: 2px solid lightgrey;
+  padding: 2rem 0;
+
+  .artist {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    img {
+      width: 80%;
+      border-radius: 8px;
+    }
+    a {
+      padding: 2rem 0;
+      font-size: 1.5rem;
+      text-decoration: none;
+      color: @maincolor;
+    }
+  }
+  @media @mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .artist {
+      width: 100%;
+      padding: 0 1rem 1rem;
+    }
+  }
+}
